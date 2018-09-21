@@ -1,0 +1,10 @@
+{
+    "workbench.editor.showIcons": false,
+    "workbench.editor.tabCloseButton": "off",
+    "workbench.editor.tabSizing": "shrink",
+    "editor.colorDecorators": false,
+    "editor.mouseWheelZoom": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.overviewRulerBorder": false,
+    "editor.parameterHints.cycle": true
+}

@@ -1,0 +1,194 @@
+$main-color: #ff5252;
+$main-variant: #f44336;
+$sec-color: #8bc34a;
+$sec-variant: #689f38;
+
+$dark-color: #212121;
+$tr: 0.2s;
+
+.remove-btn {
+  margin-right: 0.5rem;
+}
+
+// CSS TRANSITION GROUP FADE
+.fading-enter {
+  opacity: 0.01;
+}
+.fading-enter-active {
+  opacity: 1;
+  transition: 1000ms ease-in;
+}
+.fading-exit {
+  opacity: 1;
+}
+.fading-exit-active {
+  opacity: 0.01;
+
+  transition: 1000ms ease-in;
+}
+
+.moveIn-enter {
+  opacity: 0.01;
+  transform: translateY(-100px);
+}
+.moveIn-enter-active {
+  opacity: 1;
+  transform: translateY(-0px);
+  transition: 500ms ease-in;
+}
+.moveIn-exit {
+  opacity: 1;
+  transform: translateY(-0px);
+}
+.moveIn-exit-active {
+  opacity: 0.01;
+  transform: translateY(-100px);
+
+  transition: 500ms ease-in;
+}
+// header
+.small-header {
+  margin: 20px;
+  text-align: center;
+  position: relative;
+  background: url(./img/heading.png) left center repeat-x;
+}
+.small-header h5 {
+  background-color: #f9fbe7;
+  display: inline;
+  padding: 0 1rem;
+}
+
+// slider
+.slide-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+  color: #fff;
+  padding: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.text-shadow {
+  text-shadow: 0 0 14px rgba(0, 0, 0, 0.9);
+}
+.carousel-control-next,
+.carousel-control-prev {
+  width: 5%;
+}
+
+// layout
+.link {
+  color: #fff;
+  opacity: 0.8;
+  text-decoration: none;
+
+  transition: $tr;
+}
+.link:hover {
+  opacity: 1;
+  text-decoration-color: #fff;
+  text-decoration: none;
+  color: #fff;
+}
+.bg-main-color {
+  background-color: $main-color;
+}
+.bg-dark-color {
+  background-color: $dark-color;
+}
+
+.btn-secondary {
+  background-color: $main-color !important;
+  color: #fff !important;
+  border: none;
+  box-shadow: 0px 5px 10px rgba(244, 67, 54, 0.4);
+}
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active {
+  background-color: $main-variant !important;
+
+  box-shadow: 0px 2px 2px rgba(244, 67, 54, 0.8) !important;
+}
+.btn-danger {
+  background-color: $sec-color !important;
+  color: #fff !important;
+  border: none;
+  box-shadow: 0px 5px 10px rgba(85, 139, 47, 0.4);
+}
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger:active {
+  box-shadow: 0px 2px 2px rgba(85, 139, 47, 0.8) !important;
+
+  background-color: $sec-variant !important;
+}
+
+.app-footer {
+  background-color: $dark-color;
+  color: #fff;
+  position: relative;
+}
+
+.corner-block {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 1rem 2rem;
+}
+
+.nav-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.hor-card {
+  display: flex !important;
+  flex-direction: row;
+
+  background-color: #fff;
+  position: relative;
+  justify-content: space-between;
+
+  border-radius: 0.25rem;
+}
+.hor-card img {
+  margin: 0;
+  height: 100%;
+  width: 240px;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.hor-card-text {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.card-hor-link {
+  margin-bottom: 0.5rem;
+}
+
+body {
+  background-color: #f9fbe7;
+}
+
+.price-and-date {
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 0.5rem 0;
+}

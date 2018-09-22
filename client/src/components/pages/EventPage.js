@@ -10,8 +10,6 @@ import { connect } from "react-redux";
 import { getItemByAdress } from "../../actions/itemActions";
 import PropTypes from "prop-types";
 
-import Headline from "../Headline";
-
 import EventInfoCardEmpty from "../eventInfo/EventInfoCardEmpty";
 
 class EventPage extends Component {

@@ -235,4 +235,49 @@ body {
   width: 100%;
   padding: 0.5rem 0;
 }
+
+.event-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  min-width: 600px;
+  min-height: 400px;
+  background-color: #fff;
+  z-index: 200;
+}
+
+.event-shadow-overlay {
+  z-index: 100;
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.modal-ui {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 2rem;
+}
 /*# sourceMappingURL=App.css.map */

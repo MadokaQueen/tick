@@ -70,10 +70,10 @@ class Slider extends Component {
                 style={{ height: 500, width: "100%" }}
               />
               <div className="slide-caption">
-                <h3 className="font-weight-bold text-shadow pb-4">
+                <h3 className="font-weight-bold text-shadow pb-4 text-center">
                   {info.name}
                 </h3>
-                <p className="font-weight-bold text-shadow">
+                <p className="text-center font-weight-bold text-shadow">
                   <FontAwesomeIcon
                     fixedWidth
                     icon={faCity}
@@ -82,7 +82,7 @@ class Slider extends Component {
                   />
                   {info.city}
                 </p>
-                <p className="font-weight-bold small text-shadow">
+                <p className="text-center font-weight-bold small text-shadow">
                   <FontAwesomeIcon
                     fixedWidth
                     icon={faMapMarkerAlt}
@@ -91,7 +91,7 @@ class Slider extends Component {
                   />
                   {info.place}
                 </p>
-                <p className="m-1 mb-2 text-shadow">
+                <p className="text-center m-1 mb-2 text-shadow">
                   <FontAwesomeIcon
                     fixedWidth
                     className="pr-2"
@@ -100,7 +100,7 @@ class Slider extends Component {
                   />
                   {info.date}
                 </p>
-                <p className="m-1 text-shadow">
+                <p className="text-center m-1 text-shadow">
                   <FontAwesomeIcon
                     fixedWidth
                     className="pr-2"

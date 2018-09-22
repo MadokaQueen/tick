@@ -41,7 +41,6 @@ const ItemSchema = new Schema({
   },
   description: {
     type: String,
-    text: true,
     required: true
   },
   cover: {
@@ -55,6 +54,12 @@ const ItemSchema = new Schema({
   additional: {
     type: [String]
   }
+});
+ItemSchema.index({
+  place: "text",
+  city: "text",
+  name: "text",
+  description: "text"
 });
 
 module.exports = Item = mongoose.model("item", ItemSchema);

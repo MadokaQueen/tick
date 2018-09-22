@@ -8,22 +8,17 @@ const NavLinks = () => {
     <Nav className="m-auto">
       <NavItem>
         <Link to="/category" className="mx-2 link">
-          Концерты
+          Как купить билет
         </Link>
       </NavItem>
       <NavItem>
         <Link to="/category" className="mx-2 link">
-          Детям
+          Возврат билетов
         </Link>
       </NavItem>
       <NavItem>
         <Link to="/category" className="mx-2 link">
-          Спектакли
-        </Link>
-      </NavItem>
-      <NavItem>
-        <Link to="/category" className="mx-2 link">
-          Фестивали
+          Часто задаваемые вопросы
         </Link>
       </NavItem>
     </Nav>

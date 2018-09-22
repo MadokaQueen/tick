@@ -53,7 +53,7 @@ class NavCity extends React.Component {
             <DropdownItem
               onClick={() => {
                 this.props.setCity("all");
-                this.props.getItemsByCity("all", 0, 40);
+                window.location.reload(true);
               }}
             >
               Все города
@@ -61,7 +61,7 @@ class NavCity extends React.Component {
             <DropdownItem
               onClick={() => {
                 this.props.setCity("moscow");
-                this.props.getItemsByCity("moscow", 0, 40);
+                window.location.reload(true);
               }}
             >
               Москва
@@ -69,7 +69,7 @@ class NavCity extends React.Component {
             <DropdownItem
               onClick={() => {
                 this.props.setCity("spb");
-                this.props.getItemsByCity("spb", 0, 40);
+                window.location.reload(true);
               }}
             >
               Санкт-Петербург

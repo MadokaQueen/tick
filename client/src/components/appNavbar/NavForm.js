@@ -1,5 +1,5 @@
 import React from "react";
-import { InputGroup, InputGroupAddon, Input, Button } from "reactstrap";
+import { InputGroup, InputGroupAddon, Input } from "reactstrap";
 
 import { Link } from "react-router-dom";
 

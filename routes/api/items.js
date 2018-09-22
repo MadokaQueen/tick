@@ -9,7 +9,7 @@ const Item = require("../../models/Item");
 // @access  Public
 router.get("/", (req, res) => {
   Item.find()
-    .sort({ date: -1 })
+    .sort({ date: 1 })
     .then(items => res.json(items));
 });
 
@@ -38,7 +38,7 @@ router.get("/byAdress/:adress", (req, res) => {
 // @access  Public
 router.get("/some/:skip/:limit", (req, res) => {
   Item.find()
-    .sort({ date: -1 })
+    .sort({ date: 1 })
     .skip(req.params.skip * 1)
     .limit(req.params.limit * 1)
     .then(items => res.json(items))
@@ -66,7 +66,7 @@ router.get("/city/:city/:skip/:limit", (req, res) => {
       break;
   }
   Item.find(f)
-    .sort({ date: -1 })
+    .sort({ date: 1 })
     .skip(req.params.skip * 1)
     .limit(req.params.limit * 1)
     .then(items => res.json(items))
@@ -77,9 +77,11 @@ router.get("/city/:city/:skip/:limit", (req, res) => {
 // @desc    Search By Desription
 // @access  Public
 router.get("/search", (req, res) => {
-  console.log("seatch request:", req.query.str);
-  Item.find({ $text: { $search: req.query.str } })
-    .sort({ date: -1 })
+  Item.find(
+    { $text: { $search: req.query.str } },
+    { score: { $meta: "textScore" } }
+  )
+    .sort({ score: { $meta: "textScore" } })
     .then(items => res.json(items))
     .catch(err => res.status(404).json({ success: false, err }));
 });
@@ -119,10 +121,26 @@ router.delete("/:id", (req, res) => {
     .catch(err => res.status(404).json({ success: false, err }));
 });
 
-router.get("/featured", (req, res) => {
-  Item.find({ featured: true })
+router.get("/featured/:city", (req, res) => {
+  var f;
+  switch (req.params.city) {
+    case "all":
+      f = {};
+      break;
+    case "moscow":
+      f = { city: "Москва" };
+      break;
+    case "spb":
+      f = { city: "Санкт-Петербург" };
+      break;
+    default:
+      f = {};
+      break;
+  }
+  f.featured = true;
+  Item.find(f)
     .sort({ date: -1 })
-    .limit(10)
+    .limit(5)
     .then(items => res.json(items))
     .catch(err => res.status(404).json({ success: false, err }));
 });

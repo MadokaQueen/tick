@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Container, Nav, NavItem } from "reactstrap";
 
-import NavLinks from "../appNavbar/NavLinks";
 import { Link } from "react-router-dom";
 class AppNavbar extends Component {
   state = {
@@ -64,9 +63,7 @@ class AppNavbar extends Component {
               </Nav>
             </div>
             <div className="col-6 mt-4 ">
-              <div className="mx-4">
-                <NavLinks />
-              </div>
+              <div className="mx-4" />
             </div>
           </div>
         </Container>

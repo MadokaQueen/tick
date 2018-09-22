@@ -13,16 +13,16 @@ import PropTypes from "prop-types";
 
 class MainPage extends Component {
   componentDidMount() {
-    this.props.getFeatured();
-    this.props.getItemsByCity(this.props.city.city, 0, 40);
+    this.props.getFeatured(this.props.city.city);
+    this.props.getItemsByCity(this.props.city.city, 0, 20);
   }
+
   render() {
     let { featuredItem } = this.props.featuredItem;
     let { items } = this.props.item;
     return (
       <Container>
         <Slider items={featuredItem} />
-
         <Headline text="Популярные события" />
         <TicketBlock items={items} loading={this.props.loading} />
       </Container>

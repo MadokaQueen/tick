@@ -22,6 +22,8 @@ mongoose
   .then(() => console.log("MongoDB Connected..."))
   .catch(err => console.log(err));
 
+// Use Routes
+app.use("/api/items", items);
 app.use(express.static("client/build"));
 
 app.get("*", (req, res) => {

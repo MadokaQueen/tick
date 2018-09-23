@@ -15,4 +15,4 @@ ReactDOM.render(
   </Provider>,
   document.getElementById("root")
 );
-registerServiceWorker();
+//window.location.protocol === 'https:' && serviceWorker.register('service-worker.js')

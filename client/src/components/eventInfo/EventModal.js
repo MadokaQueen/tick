@@ -47,20 +47,20 @@ class EventModal extends Component {
             <InputGroup style={{ width: "130px", margin: "2rem 1rem" }}>
               <InputGroupAddon addonType="prepend">
                 <InputGroupText
-                  onClick={() => this.addVal(1)}
-                  className="btn btn-danger"
+                  onClick={() => this.addVal(-1)}
+                  className="btn btn-secondary"
                 >
-                  <b>+</b>
+                  <b>-</b>
                 </InputGroupText>
               </InputGroupAddon>
               <Input disabled placeholder={this.state.val} bssize="lg" />
               <InputGroupAddon addonType="append">
                 <InputGroupText
                   bssize="lg"
-                  onClick={() => this.addVal(-1)}
-                  className="btn btn-secondary"
+                  onClick={() => this.addVal(1)}
+                  className="btn btn-danger"
                 >
-                  <b>-</b>
+                  <b>+</b>
                 </InputGroupText>
               </InputGroupAddon>
             </InputGroup>

@@ -23,39 +23,6 @@ class AppNavbar extends Component {
           <div className="row">
             <div className="col-3 mt-4">
               <Nav vertical>
-                <h5>О нас</h5>
-
-                <NavItem className="mb-2">
-                  <Link
-                    to="/"
-                    onClick={() => window.scrollTo(0, 0)}
-                    className="link m-1 mr-4"
-                  >
-                    Обратная связь
-                  </Link>
-                </NavItem>
-                <NavItem className="mb-2">
-                  <Link
-                    to="/"
-                    onClick={() => window.scrollTo(0, 0)}
-                    className="link m-1 mr-4"
-                  >
-                    О компании
-                  </Link>
-                </NavItem>
-                <NavItem className="mb-2">
-                  <Link
-                    to="/"
-                    onClick={() => window.scrollTo(0, 0)}
-                    className="link m-1 mr-4"
-                  >
-                    Публичная оферта
-                  </Link>
-                </NavItem>
-              </Nav>
-            </div>
-            <div className="col-3 mt-4">
-              <Nav vertical>
                 <h5>Как купить</h5>
                 <NavItem className="mb-2">
                   <Link

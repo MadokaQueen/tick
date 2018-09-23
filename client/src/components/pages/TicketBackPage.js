@@ -6,27 +6,12 @@ import Headline from "../Headline";
 
 class TicketBackPage extends Component {
   render() {
+    window.document.title = "Название билеты | Возврат билетов";
     return (
       <Container>
         <Headline text="Как вернуть билет" />
         <div className="container text-content inner-page wow fadeIn">
           <h1>Правила возврата билетов</h1>
-          <h1>
-            <i
-              style={{
-                backgroundColor: "initial",
-                color: "rgb(119, 119, 119)",
-                fontSize: "15px"
-              }}
-            >
-              <strong>
-                <a href="/media/uploads/27032018/3b9e47a6de33a859dd5049f2b903c845.doc">
-                  Шаблон заявления на возврат денежных средств
-                </a>
-                &nbsp;&nbsp;
-              </strong>
-            </i>
-          </h1>
           <p>
             ОБРАЩАЕМ ВАШЕ ВНИМАНИЕ НА ТО, ЧТО
             <br />

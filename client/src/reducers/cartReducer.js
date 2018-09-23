@@ -4,8 +4,10 @@ import {
   READ_CART_FROM_STORAGE
 } from "../actions/types";
 
+let u = JSON.parse(window.sessionStorage.getItem("cart"));
+if (u === undefined || u === null) u = [];
 const initialState = {
-  cart: JSON.parse(window.sessionStorage.getItem("cart"))
+  cart: u
 };
 
 export default function(state = initialState, action) {

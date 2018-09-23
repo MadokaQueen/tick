@@ -15,7 +15,6 @@ import EventInfoCardEmpty from "../eventInfo/EventInfoCardEmpty";
 class EventPage extends Component {
   state = {};
   componentDidMount() {
-    console.log(this.props);
     this.props.getItemByAdress(this.props.info.match.params.id);
   }
   render() {

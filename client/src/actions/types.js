@@ -12,3 +12,7 @@ export const GET_FEATURED = "GET_FEATURED";
 export const SET_CITY = "SET_CITY";
 
 export const GET_SEARCH_RESULTS = "SET_CITY";
+
+export const ADD_TO_CART = "ADD_TO_CART";
+export const REMOVE_FROM_CART = "REMOVE_FROM_CART";
+export const READ_CART_FROM_STORAGE = "READ_CART_FROM_STORAGE";

@@ -7,6 +7,12 @@ import {
   InputGroupText
 } from "reactstrap";
 
+import { connect } from "react-redux";
+import { addToCart } from "../../actions/cartActions";
+import PropTypes from "prop-types";
+
+import uuid from "uuid";
+
 class EventModal extends Component {
   state = {
     val: 1
@@ -18,12 +24,13 @@ class EventModal extends Component {
     }
   };
   render() {
-    console.log(this.props);
     if (this.props.info === undefined) return <h1>undefined</h1>;
     return (
       <div className="event-modal shadow-lg">
         <div style={{ position: "relative" }}>
-          <h2 className="bg-dark text-white p-4">{this.props.info.name}</h2>
+          <h2 className="modal-header bg-dark text-white p-4 text-nowrap">
+            {this.props.info.name}
+          </h2>
           <div className="m-4">
             <p className="h3">
               <span className="text-muted pr-2">Секция: </span>
@@ -40,17 +47,16 @@ class EventModal extends Component {
             <InputGroup style={{ width: "130px", margin: "2rem 1rem" }}>
               <InputGroupAddon addonType="prepend">
                 <InputGroupText
-                  bsSize="lg"
                   onClick={() => this.addVal(1)}
                   className="btn btn-danger"
                 >
                   <b>+</b>
                 </InputGroupText>
               </InputGroupAddon>
-              <Input disabled placeholder={this.state.val} bsSize="lg" />
+              <Input disabled placeholder={this.state.val} bssize="lg" />
               <InputGroupAddon addonType="append">
                 <InputGroupText
-                  bsSize="lg"
+                  bssize="lg"
                   onClick={() => this.addVal(-1)}
                   className="btn btn-secondary"
                 >
@@ -59,8 +65,19 @@ class EventModal extends Component {
               </InputGroupAddon>
             </InputGroup>
             <div className="modal-ui">
-              <Button color="danger" className="btn-lg mr-2">
-                Перейти к оплате
+              <Button
+                color="danger"
+                onClick={() => {
+                  this.props.onBuy();
+                  this.props.addToCart({
+                    ...this.props.info,
+                    val: this.state.val,
+                    id: uuid()
+                  });
+                }}
+                className="btn-lg mr-2"
+              >
+                Добавить в корзину
               </Button>
               <p className="h3" style={{ display: "block", width: "280px" }}>
                 <span className="text-muted pr-2">Итого: </span>
@@ -80,4 +97,16 @@ class EventModal extends Component {
   }
 }
 
-export default EventModal;
+EventModal.propTypes = {
+  addToCart: PropTypes.func.isRequired,
+  cart: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+  cart: state.cart
+});
+
+export default connect(
+  mapStateToProps,
+  { addToCart }
+)(EventModal);

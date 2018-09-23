@@ -61,6 +61,9 @@ router.get("/city/:city/:skip/:limit", (req, res) => {
     case "spb":
       f = { city: "Санкт-Петербург" };
       break;
+    case "vrn":
+      f = { city: "Воронеж" };
+      break;
     default:
       f = {};
       break;
@@ -132,6 +135,9 @@ router.get("/featured/:city", (req, res) => {
       break;
     case "spb":
       f = { city: "Санкт-Петербург" };
+      break;
+    case "vrn":
+      f = { city: "Воронеж" };
       break;
     default:
       f = {};

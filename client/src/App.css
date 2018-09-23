@@ -242,10 +242,27 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  min-width: 600px;
+  width: 600px;
   min-height: 400px;
   background-color: #fff;
+  border-radius: 0.3rem;
   z-index: 200;
+}
+
+.modal-header {
+  overflow: hidden;
+  position: relative;
+}
+
+.modal-header:after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 100%;
+  background-color: inherit;
+  top: 0;
+  right: 0;
+  position: absolute;
 }
 
 .event-shadow-overlay {
@@ -279,5 +296,32 @@ body {
       -ms-flex-direction: row;
           flex-direction: row;
   margin-top: 2rem;
+}
+
+.buttons-event {
+  z-index: 200;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 400px;
+}
+
+.no-underline,
+.no-underline:hover,
+.no-underline:focus,
+.no-underline:active {
+  text-decoration: none;
 }
 /*# sourceMappingURL=App.css.map */

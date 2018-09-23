@@ -2,11 +2,13 @@ import React from "react";
 import { Table, Button } from "reactstrap";
 
 import EventModal from "./EventModal";
+import EventButtons from "./EventButtons";
 
 class EventTickets extends React.Component {
   state = {
     selectedInfo: {},
-    showModal: false
+    showModal: false,
+    showButtons: false
   };
 
   render() {
@@ -34,6 +36,28 @@ class EventTickets extends React.Component {
               info={this.state.selectedInfo}
               onClose={() =>
                 this.setState({ selectedInfo: {}, showModal: false })
+              }
+              onBuy={() => {
+                this.setState({
+                  selectedInfo: {},
+                  showModal: false,
+                  showButtons: true
+                });
+              }}
+            />
+          </React.Fragment>
+        )}
+        {this.state.showButtons && (
+          <React.Fragment>
+            <div
+              className="event-shadow-overlay"
+              onClick={() =>
+                this.setState({ selectedInfo: {}, showButtons: false })
+              }
+            />
+            <EventButtons
+              onClose={() =>
+                this.setState({ selectedInfo: {}, showButtons: false })
               }
             />
           </React.Fragment>

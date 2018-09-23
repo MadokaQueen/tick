@@ -37,6 +37,8 @@ class NavCity extends React.Component {
         return "Москва";
       case "spb":
         return "Санкт-петербург";
+      case "vrn":
+        return "Воронеж";
       default:
         return "все города";
     }
@@ -73,6 +75,14 @@ class NavCity extends React.Component {
               }}
             >
               Санкт-Петербург
+            </DropdownItem>
+            <DropdownItem
+              onClick={() => {
+                this.props.setCity("vrn");
+                window.location.reload(true);
+              }}
+            >
+              Воронеж
             </DropdownItem>
           </DropdownMenu>
         </ButtonDropdown>

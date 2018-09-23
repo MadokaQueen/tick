@@ -10,11 +10,14 @@ import SearchPage from "./components/pages/SearchPage";
 import FAQPage from "./components/pages/FAQPage";
 import HowToBuyPage from "./components/pages/HowToBuyPage";
 import TicketBackPage from "./components/pages/TicketBackPage";
+import CartPage from "./components/pages/CartPage";
 
 import EventPage from "./components/pages/EventPage";
 
 import AppNavbar from "./components/appNavbar/AppNavbar";
 import AppFooter from "./components/appFooter/AppFooter";
+
+import { Link } from "react-router-dom";
 
 class App extends Component {
   render() {
@@ -38,6 +41,7 @@ class App extends Component {
             path="/search/:str"
             component={props => <SearchPage info={props} {...props} />}
           />
+          <Route path="/cart" render={props => <CartPage info={props} />} />
         </Switch>
         <AppFooter />
       </React.Fragment>

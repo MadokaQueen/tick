@@ -26,17 +26,29 @@ class AppNavbar extends Component {
                 <h5>О нас</h5>
 
                 <NavItem className="mb-2">
-                  <Link to="/" className="link m-1 mr-4">
+                  <Link
+                    to="/"
+                    onClick={() => window.scrollTo(0, 0)}
+                    className="link m-1 mr-4"
+                  >
                     Обратная связь
                   </Link>
                 </NavItem>
                 <NavItem className="mb-2">
-                  <Link to="/" className="link m-1 mr-4">
+                  <Link
+                    to="/"
+                    onClick={() => window.scrollTo(0, 0)}
+                    className="link m-1 mr-4"
+                  >
                     О компании
                   </Link>
                 </NavItem>
                 <NavItem className="mb-2">
-                  <Link to="/" className="link m-1 mr-4">
+                  <Link
+                    to="/"
+                    onClick={() => window.scrollTo(0, 0)}
+                    className="link m-1 mr-4"
+                  >
                     Публичная оферта
                   </Link>
                 </NavItem>
@@ -46,17 +58,29 @@ class AppNavbar extends Component {
               <Nav vertical>
                 <h5>Как купить</h5>
                 <NavItem className="mb-2">
-                  <Link to="/FAQ" className="link m-1 mr-4">
+                  <Link
+                    to="/FAQ"
+                    onClick={() => window.scrollTo(0, 0)}
+                    className="link m-1 mr-4"
+                  >
                     Часто задаваемые вопросы
                   </Link>
                 </NavItem>
                 <NavItem className="mb-2">
-                  <Link to="/howtobuy" className="link m-1 mr-4">
+                  <Link
+                    to="/howtobuy"
+                    onClick={() => window.scrollTo(0, 0)}
+                    className="link m-1 mr-4"
+                  >
                     Как купить билет
                   </Link>
                 </NavItem>
                 <NavItem className="mb-2">
-                  <Link to="/ticketback" className="link m-1 mr-4">
+                  <Link
+                    to="/ticketback"
+                    onClick={() => window.scrollTo(0, 0)}
+                    className="link m-1 mr-4"
+                  >
                     Возврат билетов
                   </Link>
                 </NavItem>

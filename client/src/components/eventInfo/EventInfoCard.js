@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Link } from "react-router-dom";
+import { Button } from "reactstrap";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar } from "@fortawesome/free-solid-svg-icons";
@@ -48,12 +48,12 @@ const HorizontalCard = props => {
               alignItems: "center"
             }}
           >
-            <Link
-              to={"/event/" + info.adress}
-              className="btn btn-danger card-hor-link btn-lg mb-4"
+            <Button
+              onClick={() => window.scrollTo(0, document.body.scrollHeight)}
+              className="btn btn-danger btn-lg mb-4"
             >
-              Купить билеты
-            </Link>
+              Выбрать места
+            </Button>
           </div>
           <div className="price-and-date" style={{ flexDirection: "row" }}>
             <p className="text-muted m-1 mb-2 h6 p-3">

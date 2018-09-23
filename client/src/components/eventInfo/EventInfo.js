@@ -19,7 +19,7 @@ const EventInfo = props => {
       </div>
       <div className="row">
         <div className="col-10 m-auto">
-          <Headline text="Описание" />
+          {info.description.length > 10 && <Headline text="Описание" />}
           <EventDescription text={info.description} />
         </div>
       </div>

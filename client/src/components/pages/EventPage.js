@@ -21,7 +21,7 @@ class EventPage extends Component {
     let item = false;
     if (this.props.item.items) {
       item = this.props.item.items[0];
-      window.document.title = "Название билеты | " + (item ? item.name : "");
+      window.document.title = "Tticketss | " + (item ? item.name : "");
     }
     return (
       <div className="EventPage">

@@ -6,7 +6,7 @@ import Headline from "../Headline";
 
 class FAQPage extends Component {
   render() {
-    window.document.title = "Название билеты | Часто задаваемые вопросы";
+    window.document.title = "Tticketss | Часто задаваемые вопросы";
     return (
       <Container>
         <Headline text="Часто задаваемые вопросы" />

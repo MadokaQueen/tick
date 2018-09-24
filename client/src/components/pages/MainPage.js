@@ -16,7 +16,7 @@ class MainPage extends Component {
     this.props.getFeatured(this.props.city.city);
     this.props.getItemsByCity(this.props.city.city, 0, 20);
 
-    window.document.title = "Название билеты";
+    window.document.title = "Tticketss";
   }
 
   render() {

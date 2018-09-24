@@ -71,7 +71,7 @@ class Slider extends Component {
               <img
                 src={imageSrc}
                 alt=""
-                style={{ height: 500, width: "100%" }}
+                style={{ height: 440, width: "100%" }}
               />
               <div className="slide-caption">
                 <h3
@@ -147,7 +147,7 @@ class Slider extends Component {
     });
 
     return (
-      <div style={{ height: 520 }}>
+      <div style={{ height: 440 }}>
         <Carousel
           activeIndex={activeIndex}
           next={this.next}

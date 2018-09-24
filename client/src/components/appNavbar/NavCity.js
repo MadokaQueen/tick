@@ -45,7 +45,7 @@ class NavCity extends React.Component {
   }
   render() {
     return (
-      <React.Fragment>
+      <div>
         <span className="text-white mr-2">Ваш город:</span>
         <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
           <DropdownToggle color="danger" caret>
@@ -86,7 +86,7 @@ class NavCity extends React.Component {
             </DropdownItem>
           </DropdownMenu>
         </ButtonDropdown>
-      </React.Fragment>
+      </div>
     );
   }
 }

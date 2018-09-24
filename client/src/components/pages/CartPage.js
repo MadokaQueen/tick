@@ -20,7 +20,7 @@ class CartPage extends Component {
     return sum;
   };
   render() {
-    window.document.title = "Tticketss | Корзина";
+    window.document.title = "tickets-everyday | Корзина";
     const { cart } = this.props.cart;
     return (
       <Container className="my-4" style={{ minHeight: "900px" }}>

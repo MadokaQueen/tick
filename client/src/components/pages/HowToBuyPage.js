@@ -6,7 +6,7 @@ import Headline from "../Headline";
 
 class HowToBuyPage extends Component {
   render() {
-    window.document.title = "Tticketss | Как купить билет";
+    window.document.title = "tickets-everyday | Как купить билет";
     return (
       <Container>
         <Headline text="Как купить билет" />

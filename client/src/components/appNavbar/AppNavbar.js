@@ -46,19 +46,26 @@ class AppNavbar extends Component {
             </Navbar>
           </CSSTransition>
           <CSSTransition timeout={500} classNames="fade">
-            <Navbar dark expand="sm" className="py-4 bg-dark-color">
+            <Navbar dark expand="sm" className="bg-dark-color p-0">
               <Container>
                 <Link
                   onClick={() => window.scrollTo(0, 0)}
                   to="/"
-                  className="link"
+                  className="link m-1 p-0 d-b"
+                  style={{ height: "60px" }}
                 >
-                  <h4>Tticketss</h4>
+                  <img
+                    src="../images/logo.png"
+                    alt=""
+                    style={{
+                      height: "100%"
+                    }}
+                  />
                 </Link>
                 <Collapse isOpen={this.state.isOpen} navbar>
                   <NavForm formId="form1" />
                 </Collapse>
-                <NavCity />
+                <NavCity className="my-4" />
               </Container>
             </Navbar>
           </CSSTransition>
@@ -68,22 +75,29 @@ class AppNavbar extends Component {
               <Navbar
                 dark
                 expand="sm"
-                className="w-100 nav-fixed bg-dark-color"
+                className="w-100 p-0 nav-fixed bg-dark-color"
                 style={{ zIndex: "2000" }}
               >
                 <Container>
                   <Link
                     onClick={() => window.scrollTo(0, 0)}
                     to="/"
-                    className="link pr-4"
+                    className="link m-1 p-0 d-b"
+                    style={{ height: "40px" }}
                   >
-                    <b>Tticketss</b>
+                    <img
+                      src="../images/logo.png"
+                      alt=""
+                      style={{
+                        height: "100%"
+                      }}
+                    />
                   </Link>
                   <LogIn />
                   <Collapse isOpen={this.state.isOpen} navbar>
                     <NavForm formId="form2" />
                   </Collapse>
-                  <NavCity />
+                  <NavCity className="my-2" />
                 </Container>
               </Navbar>
             </CSSTransition>

@@ -6,7 +6,7 @@ import Headline from "../Headline";
 
 class TicketBackPage extends Component {
   render() {
-    window.document.title = "Tticketss | Возврат билетов";
+    window.document.title = "tickets-everyday | Возврат билетов";
     return (
       <Container>
         <Headline text="Как вернуть билет" />

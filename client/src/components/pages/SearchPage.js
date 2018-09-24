@@ -16,7 +16,7 @@ class SearchPage extends Component {
   componentDidMount() {
     console.log("search update");
     this.props.getSearchResults(this.props.info.match.params.str);
-    window.document.title = "Tticketss | Результаты поиска";
+    window.document.title = "tickets-everyday | Результаты поиска";
   }
   render() {
     let { items } = this.props.item;

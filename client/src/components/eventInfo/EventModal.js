@@ -28,23 +28,23 @@ class EventModal extends Component {
     return (
       <div className="event-modal shadow-lg">
         <div style={{ position: "relative" }}>
-          <h2 className="modal-header bg-dark text-white p-4 text-nowrap">
+          <h3 className="modal-header bg-dark text-white p-4 text-nowrap">
             {this.props.info.name}
-          </h2>
+          </h3>
           <div className="m-4">
-            <p className="h3">
+            <p className="h5">
               <span className="text-muted pr-2">Секция: </span>
               {this.props.info.seat}
             </p>
-            <p className="h3">
+            <p className="h5">
               <span className="text-muted pr-2">Билетов доступно: </span>
               {this.props.info.tickets}
             </p>
-            <p className="h3">
+            <p className="h5">
               <span className="text-muted pr-2">Стоимость: </span>
               {this.props.info.price + " р."}
             </p>
-            <InputGroup style={{ width: "130px", margin: "2rem 1rem" }}>
+            <InputGroup style={{ width: "130px", margin: "1rem" }}>
               <InputGroupAddon addonType="prepend">
                 <InputGroupText
                   onClick={() => this.addVal(-1)}
@@ -75,18 +75,18 @@ class EventModal extends Component {
                     id: uuid()
                   });
                 }}
-                className="btn-lg mr-2"
+                className="mr-2"
               >
                 Добавить в корзину
               </Button>
-              <p className="h3" style={{ display: "block", width: "280px" }}>
+              <p className="h5" style={{ display: "block", width: "200px" }}>
                 <span className="text-muted pr-2">Итого: </span>
                 {this.props.info.price * this.state.val + " р."}
               </p>
             </div>
           </div>
           <Button
-            className="close-modal-btn m-4 btn-lg"
+            className="close-modal-btn m-4"
             onClick={() => this.props.onClose()}
           >
             закрыть

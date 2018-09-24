@@ -200,13 +200,23 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
+}
+
+.card-buy {
+  position: absolute;
+  margin: 1rem 20px;
+  bottom: 0;
+  left: 0;
+  right: 240px;
+  width: 200px;
 }
 
 .card-hor-link {
@@ -219,6 +229,9 @@ body {
 
 .price-and-date {
   background-color: #f5f5f5;
+  position: absolute;
+  bottom: 0;
+  right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -257,12 +270,15 @@ body {
 .modal-header:after {
   content: "";
   display: block;
-  width: 50px;
+  width: 100px;
   height: 100%;
   background-color: inherit;
+  opacity: 0.8;
   top: 0;
   right: 0;
   position: absolute;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(52, 58, 64, 0)), color-stop(80%, #343a40), to(#343a40));
+  background: linear-gradient(to right, rgba(52, 58, 64, 0) 0%, #343a40 80%, #343a40 100%);
 }
 
 .event-shadow-overlay {
@@ -279,8 +295,8 @@ body {
 
 .close-modal-btn {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -80px;
+  right: -20px;
 }
 
 .modal-ui {

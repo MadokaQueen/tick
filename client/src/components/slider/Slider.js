@@ -8,10 +8,13 @@ import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import { faRubleSign } from "@fortawesome/free-solid-svg-icons";
 import { faCity } from "@fortawesome/free-solid-svg-icons";
 
+import uuid from "uuid";
+
 class Slider extends Component {
   constructor(props) {
     super(props);
     this.state = { activeIndex: 0 };
+    this.animating = false;
     this.next = this.next.bind(this);
     this.previous = this.previous.bind(this);
     this.goToIndex = this.goToIndex.bind(this);
@@ -28,16 +31,17 @@ class Slider extends Component {
   }
 
   next() {
-    if (this.animating) return;
+    if (this.animating) return 0;
     const nextIndex =
       this.state.activeIndex === this.props.items.length - 1
         ? 0
         : this.state.activeIndex + 1;
     this.setState({ activeIndex: nextIndex });
+    console.log("state set");
   }
 
   previous() {
-    if (this.animating) return;
+    if (this.animating) return 0;
     const nextIndex =
       this.state.activeIndex === 0
         ? this.props.items.length - 1
@@ -46,7 +50,7 @@ class Slider extends Component {
   }
 
   goToIndex(newIndex) {
-    if (this.animating) return;
+    if (this.animating) return 0;
     this.setState({ activeIndex: newIndex });
   }
 
@@ -59,7 +63,7 @@ class Slider extends Component {
         <CarouselItem
           onExiting={this.onExiting}
           onExited={this.onExited}
-          key={info._id}
+          key={uuid()}
           className="bg-dark"
         >
           {this.props.items.length > 0 && (
@@ -70,10 +74,16 @@ class Slider extends Component {
                 style={{ height: 500, width: "100%" }}
               />
               <div className="slide-caption">
-                <h3 className="font-weight-bold text-shadow pb-4 text-center">
+                <h3
+                  className="font-weight-bold text-shadow pb-4 text-center"
+                  style={{ width: "400px" }}
+                >
                   {info.name}
                 </h3>
-                <p className="text-center font-weight-bold text-shadow">
+                <p
+                  className="text-center font-weight-bold text-shadow"
+                  style={{ width: "400px" }}
+                >
                   <FontAwesomeIcon
                     fixedWidth
                     icon={faCity}
@@ -82,7 +92,10 @@ class Slider extends Component {
                   />
                   {info.city}
                 </p>
-                <p className="text-center font-weight-bold small text-shadow">
+                <p
+                  className="text-center font-weight-bold small text-shadow"
+                  style={{ width: "400px" }}
+                >
                   <FontAwesomeIcon
                     fixedWidth
                     icon={faMapMarkerAlt}
@@ -91,7 +104,10 @@ class Slider extends Component {
                   />
                   {info.place}
                 </p>
-                <p className="text-center m-1 mb-2 text-shadow">
+                <p
+                  className="text-center m-1 mb-2 text-shadow"
+                  style={{ width: "400px" }}
+                >
                   <FontAwesomeIcon
                     fixedWidth
                     className="pr-2"
@@ -100,7 +116,10 @@ class Slider extends Component {
                   />
                   {info.date}
                 </p>
-                <p className="text-center m-1 text-shadow">
+                <p
+                  className="text-center m-1 text-shadow"
+                  style={{ width: "400px" }}
+                >
                   <FontAwesomeIcon
                     fixedWidth
                     className="pr-2"

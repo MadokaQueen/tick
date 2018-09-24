@@ -70,7 +70,6 @@ $tr: 0.2s;
   border-radius: 0.25rem;
   color: #fff;
   padding: 1rem;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -171,8 +170,17 @@ $tr: 0.2s;
 
 .hor-card-text {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-direction: column;
+  position: relative;
+}
+.card-buy {
+  position: absolute;
+  margin: 1rem 20px;
+  bottom: 0;
+  left: 0;
+  right: 240px;
+  width: 200px;
 }
 
 .card-hor-link {
@@ -185,6 +193,9 @@ body {
 
 .price-and-date {
   background-color: #f5f5f5;
+  position: absolute;
+  bottom: 0;
+  right: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -211,12 +222,19 @@ body {
 .modal-header:after {
   content: "";
   display: block;
-  width: 50px;
+  width: 100px;
   height: 100%;
   background-color: inherit;
+  opacity: 0.8;
   top: 0;
   right: 0;
   position: absolute;
+  background: linear-gradient(
+    to right,
+    rgba(52, 58, 64, 0) 0%,
+    rgba(52, 58, 64, 1) 80%,
+    rgba(52, 58, 64, 1) 100%
+  );
 }
 .event-shadow-overlay {
   z-index: 100;
@@ -231,8 +249,8 @@ body {
 }
 .close-modal-btn {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -80px;
+  right: -20px;
 }
 
 .modal-ui {

@@ -2,7 +2,7 @@ import React from "react";
 
 const HorizontalEmpty = () => {
   return (
-    <div className="shadow hor-card" style={{ opacity: 1 }}>
+    <div className="shadow hor-card" style={{ opacity: 0 }}>
       <div style={{ position: "relative" }}>
         <div
           style={{ width: "240px", height: "350px" }}

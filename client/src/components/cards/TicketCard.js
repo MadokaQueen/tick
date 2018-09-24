@@ -14,7 +14,7 @@ const TicketCard = props => {
   let coverSrc = "../images/covers/" + info.cover;
 
   return (
-    <Card className="shadow">
+    <Card className="shadow" style={{ opacity: 0 }}>
       <CardImg top width="100%" src={coverSrc} alt={info.adress} />
       <CardBody>
         <CardTitle style={{ minHeight: "55px" }}>{info.name}</CardTitle>

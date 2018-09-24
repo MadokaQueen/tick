@@ -29,9 +29,6 @@ class AppNavbar extends Component {
       }
     });
   }
-  componentWillUnmount() {
-    window.removeEventListener("scroll");
-  }
 
   render() {
     return (
@@ -56,7 +53,7 @@ class AppNavbar extends Component {
                   to="/"
                   className="link"
                 >
-                  <h4>Название Билеты</h4>
+                  <h4>Tticketss</h4>
                 </Link>
                 <Collapse isOpen={this.state.isOpen} navbar>
                   <NavForm formId="form1" />
@@ -80,7 +77,7 @@ class AppNavbar extends Component {
                     to="/"
                     className="link pr-4"
                   >
-                    <b>Название Билеты</b>
+                    <b>Tticketss</b>
                   </Link>
                   <LogIn />
                   <Collapse isOpen={this.state.isOpen} navbar>
@@ -96,5 +93,5 @@ class AppNavbar extends Component {
     );
   }
 }
-
+// или может экспортировать кирилла из страны?
 export default AppNavbar;

@@ -18,7 +18,7 @@ class AppNavbar extends Component {
       <div className="app-footer">
         <Container className="pb-4" style={{ position: "relative" }}>
           <div className="corner-block">
-            <h4 className="link">Название Билеты</h4>
+            <h4 className="link">Tticketss</h4>
           </div>
           <div className="row">
             <div className="col-3 mt-4">

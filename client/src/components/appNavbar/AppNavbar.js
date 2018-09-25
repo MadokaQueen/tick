@@ -41,6 +41,7 @@ class AppNavbar extends Component {
                 <NavbarToggler onClick={this.toggle} />
                 <Collapse isOpen={this.state.isOpen} navbar>
                   <NavLinks />
+                  <h4 style={{ color: "white" }}>+7-495-127-71-19</h4>
                 </Collapse>
               </Container>
             </Navbar>

@@ -18,7 +18,12 @@ const NavLinks = () => {
       </NavItem>
       <NavItem>
         <Link to="/FAQ" className="mx-2 link">
-          Часто задаваемые вопросы
+          Частые вопросы
+        </Link>
+      </NavItem>
+      <NavItem>
+        <Link to="/contacts" className="mx-2 link">
+          Контакты
         </Link>
       </NavItem>
     </Nav>

@@ -36,14 +36,13 @@ class AppNavbar extends Component {
           <div className="row">
             <div className="col-6 mt-4">
               <Nav vertical>
-                <h5>Как купить</h5>
                 <NavItem className="mb-2">
                   <Link
                     to="/FAQ"
                     onClick={() => window.scrollTo(0, 0)}
                     className="link m-1 mr-4"
                   >
-                    Часто задаваемые вопросы
+                    Частые вопросы
                   </Link>
                 </NavItem>
                 <NavItem className="mb-2">
@@ -64,10 +63,40 @@ class AppNavbar extends Component {
                     Возврат билетов
                   </Link>
                 </NavItem>
+                <NavItem className="mb-2">
+                  <Link
+                    to="/contacts"
+                    onClick={() => window.scrollTo(0, 0)}
+                    className="link m-1 mr-4"
+                  >
+                    Контакты
+                  </Link>
+                </NavItem>
               </Nav>
             </div>
             <div className="col-6 mt-4 ">
-              <div className="mx-4" />
+              <div className="mx-4">
+                <img
+                  style={{ height: "35px" }}
+                  className="pr-2 pb-2"
+                  src="./images/pay/master.png"
+                />
+                <img
+                  style={{ height: "35px" }}
+                  className="pr-2 pb-2"
+                  src="./images/pay/visa.png"
+                />
+                <img
+                  style={{ height: "35px" }}
+                  className="pr-2 pb-2"
+                  src="./images/pay/maestro.png"
+                />
+                <img
+                  style={{ height: "35px" }}
+                  className="pr-2 pb-2"
+                  src="./images/pay/uniteller.png"
+                />
+              </div>
             </div>
           </div>
         </Container>

@@ -14,7 +14,7 @@ import PropTypes from "prop-types";
 class MainPage extends Component {
   componentDidMount() {
     this.props.getFeatured(this.props.city.city);
-    this.props.getItemsByCity(this.props.city.city, 0, 20);
+    this.props.getItemsByCity(this.props.city.city, 0, 200);
 
     window.document.title = "tickets-everyday";
   }

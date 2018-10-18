@@ -51,7 +51,7 @@ class AppNavbar extends Component {
                     onClick={() => window.scrollTo(0, 0)}
                     className="link m-1 mr-4"
                   >
-                    Как купить билет
+                    Как купить
                   </Link>
                 </NavItem>
                 <NavItem className="mb-2">
@@ -79,22 +79,38 @@ class AppNavbar extends Component {
                 <img
                   style={{ height: "35px" }}
                   className="pr-2 pb-2"
-                  src="./images/pay/master.png"
+                  alt=""
+                  src="./images/pay/00-payonline-h250.png"
                 />
                 <img
                   style={{ height: "35px" }}
                   className="pr-2 pb-2"
-                  src="./images/pay/visa.png"
+                  alt=""
+                  src="./images/pay/01-mir-h250.png"
                 />
                 <img
                   style={{ height: "35px" }}
                   className="pr-2 pb-2"
-                  src="./images/pay/maestro.png"
+                  alt=""
+                  src="./images/pay/02-visa-h250.png"
                 />
                 <img
                   style={{ height: "35px" }}
                   className="pr-2 pb-2"
+                  alt=""
+                  src="./images/pay/03-mastercard-h250.png"
+                />
+                <img
+                  style={{ height: "35px" }}
+                  className="pr-2 pb-2"
+                  alt=""
                   src="./images/pay/uniteller.png"
+                />
+                <img
+                  style={{ height: "35px" }}
+                  className="pr-2 pb-2"
+                  alt=""
+                  src="./images/pay/maestro.png"
                 />
               </div>
             </div>

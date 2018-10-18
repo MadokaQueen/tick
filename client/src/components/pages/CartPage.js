@@ -6,6 +6,7 @@ import { Container, Table, Button } from "reactstrap";
 
 import { connect } from "react-redux";
 import { removeFromCart } from "../../actions/cartActions";
+import { setUser } from "../../actions/userActions";
 import PropTypes from "prop-types";
 
 class CartPage extends Component {
@@ -22,6 +23,7 @@ class CartPage extends Component {
   render() {
     window.document.title = "tickets-everyday | Корзина";
     const { cart } = this.props.cart;
+    const { user } = this.props.user;
     return (
       <Container className="my-4" style={{ minHeight: "900px" }}>
         <div className="p-4 shadow" style={{ backgroundColor: "#fff" }}>
@@ -73,16 +75,34 @@ class CartPage extends Component {
             </h2>
           </div>
         </div>
-
-        {this.getSum() > 0 && (
+        {user === "none" && (
           <div className="row">
-            <div className="col-6 m-auto">
-              <Button className="btn-danger btn-block btn-lg m-4">
-                <h2>Перейти к оплате</h2>
-              </Button>
+            <div className="col-3" />
+            <div className="col-3">
+              <Link to="/login" className="btn btn-block btn-danger btn-lg m-4">
+                Войти
+              </Link>
+            </div>
+            <div className="col-3">
+              <Link
+                to="/register"
+                className="btn btn-block btn-danger btn-lg m-4"
+              >
+                Зарегистрироваться
+              </Link>
             </div>
           </div>
         )}
+        {this.getSum() > 0 &&
+          user !== "none" && (
+            <div className="row">
+              <div className="col-6 m-auto">
+                <Button className="btn-danger btn-block btn-lg m-4">
+                  <h2>Перейти к оплате</h2>
+                </Button>
+              </div>
+            </div>
+          )}
       </Container>
     );
   }
@@ -90,14 +110,16 @@ class CartPage extends Component {
 
 CartPage.propTypes = {
   removeFromCart: PropTypes.func.isRequired,
+  setUser: PropTypes.func.isRequired,
   cart: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({
-  cart: state.cart
+  cart: state.cart,
+  user: state.user
 });
 
 export default connect(
   mapStateToProps,
-  { removeFromCart }
+  { removeFromCart, setUser }
 )(CartPage);

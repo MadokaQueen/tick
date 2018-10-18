@@ -80,20 +80,6 @@ class AppNavbar extends Component {
                 style={{ zIndex: "2000" }}
               >
                 <Container>
-                  <Link
-                    onClick={() => window.scrollTo(0, 0)}
-                    to="/"
-                    className="link m-1 p-0 d-b"
-                    style={{ height: "40px" }}
-                  >
-                    <img
-                      src="../images/logo.png"
-                      alt=""
-                      style={{
-                        height: "100%"
-                      }}
-                    />
-                  </Link>
                   <LogIn />
                   <Collapse isOpen={this.state.isOpen} navbar>
                     <NavForm formId="form2" />

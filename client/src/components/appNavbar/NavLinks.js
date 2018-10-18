@@ -8,7 +8,7 @@ const NavLinks = () => {
     <Nav className="m-auto">
       <NavItem>
         <Link to="/howtobuy" className="mx-2 link">
-          Как купить билет
+          Как купить
         </Link>
       </NavItem>
       <NavItem>

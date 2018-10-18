@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const path = require("path");
 
 const items = require("./routes/api/items");
+const users = require("./routes/api/users");
 
 const app = express();
 
@@ -24,6 +25,7 @@ mongoose
 
 // Use Routes
 app.use("/api/items", items);
+app.use("/api/users", users);
 app.use(express.static("client/build"));
 
 app.get("*", (req, res) => {

@@ -16,3 +16,5 @@ export const GET_SEARCH_RESULTS = "SET_CITY";
 export const ADD_TO_CART = "ADD_TO_CART";
 export const REMOVE_FROM_CART = "REMOVE_FROM_CART";
 export const READ_CART_FROM_STORAGE = "READ_CART_FROM_STORAGE";
+
+export const SET_USER = "SET_USER";

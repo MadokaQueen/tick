@@ -72,16 +72,19 @@ class AppNavbar extends Component {
                     Контакты
                   </Link>
                 </NavItem>
+                <NavItem className="mb-2">
+                  <Link
+                    to="/requisites"
+                    onClick={() => window.scrollTo(0, 0)}
+                    className="link m-1 mr-4"
+                  >
+                    Реквизиты
+                  </Link>
+                </NavItem>
               </Nav>
             </div>
             <div className="col-6 mt-4 ">
               <div className="mx-4">
-                <img
-                  style={{ height: "35px" }}
-                  className="pr-2 pb-2"
-                  alt=""
-                  src="./images/pay/00-payonline-h250.png"
-                />
                 <img
                   style={{ height: "35px" }}
                   className="pr-2 pb-2"

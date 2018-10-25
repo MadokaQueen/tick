@@ -13,6 +13,8 @@ import TicketBackPage from "./components/pages/TicketBackPage";
 import CartPage from "./components/pages/CartPage";
 import ContactsPage from "./components/pages/ContactsPage";
 
+import RequisitesPage from "./components/pages/RequisitesPage";
+
 import RegisterPage from "./components/pages/RegisterPage";
 import LoginPage from "./components/pages/LoginPage";
 
@@ -33,6 +35,11 @@ class App extends Component {
           <Route exact path="/FAQ" render={props => <FAQPage />} />
           <Route exact path="/howtobuy" render={props => <HowToBuyPage />} />
           <Route exact path="/contacts" render={props => <ContactsPage />} />
+          <Route
+            exact
+            path="/requisites"
+            render={props => <RequisitesPage />}
+          />
 
           <Route exact path="/register" render={props => <RegisterPage />} />
           <Route exact path="/login" render={props => <LoginPage />} />

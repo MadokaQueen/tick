@@ -9,6 +9,8 @@ import { removeFromCart } from "../../actions/cartActions";
 import { setUser } from "../../actions/userActions";
 import PropTypes from "prop-types";
 
+import PayButton from "./PayButton";
+
 class CartPage extends Component {
   state = {};
 
@@ -100,6 +102,7 @@ class CartPage extends Component {
                 <Button className="btn-danger btn-block btn-lg m-4">
                   <h2>Перейти к оплате</h2>
                 </Button>
+                <PayButton sum={this.getSum()} customer={user} />
               </div>
             </div>
           )}

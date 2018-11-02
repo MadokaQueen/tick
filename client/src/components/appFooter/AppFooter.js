@@ -103,12 +103,12 @@ class AppNavbar extends Component {
                   alt=""
                   src="./images/pay/03-mastercard-h250.png"
                 />
-                <img
+                {/* <img
                   style={{ height: "35px" }}
                   className="pr-2 pb-2"
                   alt=""
                   src="./images/pay/uniteller.png"
-                />
+                /> */}
                 <img
                   style={{ height: "35px" }}
                   className="pr-2 pb-2"
